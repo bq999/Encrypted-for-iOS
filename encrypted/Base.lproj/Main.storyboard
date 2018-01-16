@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="encrypted" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-KX-PWo">
+                                <rect key="frame" x="16" y="96" width="343" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="nKA-dC-jkw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ede-TL-VzB">
+                                <rect key="frame" x="16" y="174" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Kk-w1-vQP"/>
+                                </constraints>
+                                <state key="normal" title="Encrypted"/>
+                                <connections>
+                                    <action selector="btnDoneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1is-zb-A7t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encrypted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-pD-Kcb">
+                                <rect key="frame" x="16" y="20" width="343" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="wZx-bT-h2v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Encrypted message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YMr-Aw-SgE">
+                                <rect key="frame" x="16" y="222" width="343" height="153"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="iG7-Np-S7g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Decrypted message" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EoN-I7-uzR">
+                                <rect key="frame" x="7" y="452" width="352" height="195"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Z-9P-eJQ">
+                                <rect key="frame" x="16" y="405" width="343" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="eT2-oG-DFY"/>
+                                </constraints>
+                                <state key="normal" title="Decrypted"/>
+                                <connections>
+                                    <action selector="decrypted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9j5-ci-b0N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ede-TL-VzB" firstAttribute="leading" secondItem="YMr-Aw-SgE" secondAttribute="leading" id="4xb-DL-3Ba"/>
+                            <constraint firstItem="bfc-KX-PWo" firstAttribute="trailing" secondItem="ede-TL-VzB" secondAttribute="trailing" id="AFz-SJ-Ap6"/>
+                            <constraint firstItem="Y4Z-9P-eJQ" firstAttribute="trailing" secondItem="EoN-I7-uzR" secondAttribute="trailing" id="CWi-Ms-xlS"/>
+                            <constraint firstItem="bfc-KX-PWo" firstAttribute="leading" secondItem="ede-TL-VzB" secondAttribute="leading" id="EjR-8Z-jNo"/>
+                            <constraint firstAttribute="bottom" secondItem="EoN-I7-uzR" secondAttribute="bottom" constant="20" symbolic="YES" id="GYZ-aM-HlG"/>
+                            <constraint firstItem="f8F-pD-Kcb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IfL-am-d4c"/>
+                            <constraint firstItem="YMr-Aw-SgE" firstAttribute="leading" secondItem="Y4Z-9P-eJQ" secondAttribute="leading" id="J1R-4r-ixZ"/>
+                            <constraint firstItem="f8F-pD-Kcb" firstAttribute="trailing" secondItem="bfc-KX-PWo" secondAttribute="trailing" id="O9m-oz-7o4"/>
+                            <constraint firstItem="f8F-pD-Kcb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Rky-3x-71y"/>
+                            <constraint firstItem="YMr-Aw-SgE" firstAttribute="trailing" secondItem="Y4Z-9P-eJQ" secondAttribute="trailing" id="YwY-uP-vEn"/>
+                            <constraint firstItem="YMr-Aw-SgE" firstAttribute="top" secondItem="ede-TL-VzB" secondAttribute="bottom" constant="8" symbolic="YES" id="bXf-uK-21J"/>
+                            <constraint firstItem="EoN-I7-uzR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="drK-Ax-5uf"/>
+                            <constraint firstItem="EoN-I7-uzR" firstAttribute="top" secondItem="Y4Z-9P-eJQ" secondAttribute="bottom" constant="8" symbolic="YES" id="fK8-qC-ibD"/>
+                            <constraint firstItem="bfc-KX-PWo" firstAttribute="top" secondItem="f8F-pD-Kcb" secondAttribute="bottom" constant="23" id="pKm-0F-3c4"/>
+                            <constraint firstItem="f8F-pD-Kcb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s23-tq-zEP"/>
+                            <constraint firstItem="ede-TL-VzB" firstAttribute="trailing" secondItem="YMr-Aw-SgE" secondAttribute="trailing" id="s2m-nr-JqY"/>
+                            <constraint firstItem="ede-TL-VzB" firstAttribute="top" secondItem="bfc-KX-PWo" secondAttribute="bottom" constant="15" id="xCC-wi-6jf"/>
+                            <constraint firstItem="Y4Z-9P-eJQ" firstAttribute="top" secondItem="YMr-Aw-SgE" secondAttribute="bottom" constant="30" id="xy4-lc-wYt"/>
+                            <constraint firstItem="f8F-pD-Kcb" firstAttribute="leading" secondItem="bfc-KX-PWo" secondAttribute="leading" id="y2x-aD-1KF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="YMr-Aw-SgE" id="dmW-SC-p4C"/>
+                        <outlet property="label2" destination="EoN-I7-uzR" id="K9g-cr-87z"/>
+                        <outlet property="txtMsg" destination="bfc-KX-PWo" id="v3A-dx-Q1p"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
